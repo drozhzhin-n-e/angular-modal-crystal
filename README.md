@@ -71,4 +71,4 @@ Window state changes are available by subscription `stateEvents.subscribe()`.
 
 ## Demo 
 
-http://crystalui.org/components/pinch-zoom
+http://crystalui.org/components/modal
