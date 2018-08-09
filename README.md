@@ -33,6 +33,7 @@ To open the window, import the `Modal` service and call the `load()` method. As 
 
 ## Properties
 
+| name | description |
 |------------------------|---------------------------------------------|
 | `id: string = undefined` | The identifier of the window. It will distinguish one window from another. |
 | `mode: "desktop" | "mobile" | "dialog" = "desktop"` | The type of the window template. |
@@ -47,6 +48,7 @@ To open the window, import the `Modal` service and call the `load()` method. As 
 
 ## Methods
 
+| name | description |
 |------------------------|---------------------------------------------|
 | `load({ id: "my-modal", component: MyComponent })` | Shows the modal. |
 | `close({ id: "my-modal" })` | Hides the modal. |
@@ -55,6 +57,7 @@ To open the window, import the `Modal` service and call the `load()` method. As 
 
 Window state changes are available by subscription `stateEvents.subscribe()`.
 
+| name | description |
 |------------------------|---------------------------------------------|
 | `show` | The event is called before the modal appears. |
 | `shown` | The event is called after the animation of the appearance of the modal. |
