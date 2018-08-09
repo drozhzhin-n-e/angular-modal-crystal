@@ -22,7 +22,7 @@ import {ModalModule} from '@crystalui/angular-modal';
 To open the window, import the `Modal` service and call the `load()` method. As a parameter, pass your component. It will be the contents of the window.
 
 ```ts
-import {Modal} from 'angular-modal@crystal';
+import {Modal} from '@crystalui/angular-modal';
 import {MyComponent} from './my.component';
 
 public constructor(private modal: Modal) {};
