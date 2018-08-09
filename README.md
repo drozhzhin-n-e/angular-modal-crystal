@@ -36,15 +36,15 @@ To open the window, import the `Modal` service and call the `load()` method. As 
 | name | description |
 |------------------------|---------------------------------------------|
 | `id: string = undefined` | The identifier of the window. It will distinguish one window from another. |
-| ```javascript mode: "desktop" | "mobile" | "dialog" = "desktop"``` | The type of the window template. |
+| `mode: "desktop" / "mobile" / "dialog" = "desktop"` | The type of the window template. |
 | `data: any` | Any data that needs to be pass to the window. In the window component, you can get them using `@Input() modalData: any`. |
 | `width: string = "800px"` | Width of the window. |
 | `height: string = "auto"` | Height of the window. By default, the height of the window is determined by the height of its content. |
 | `maxWidth: string = "calc(100% - 32px)"` | Maximum width of the window. |
 | `maxHeight: string = "calc(100% - 32px)"` | Maximum height of the window. |
 | `overlayBackdrop: boolean = true` | Whether the window has a backdrop. |
-| `backdropClass: string, { [key: string]: any; }` | Custom classes for the backdrop. Supports the same syntax as ngClass. |
-| `modalClass: string, { [key: string]: any; }` | Custom classes for the modal window. Supports the same syntax as ngClass. |
+| `backdropClass: string / { [key: string]: any; }` | Custom classes for the backdrop. Supports the same syntax as ngClass. |
+| `modalClass: string / { [key: string]: any; }` | Custom classes for the modal window. Supports the same syntax as ngClass. |
 
 ## Methods
 
