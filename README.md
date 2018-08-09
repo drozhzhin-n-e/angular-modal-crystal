@@ -6,7 +6,7 @@ This module allows for show modal and dialog boxes.
 
 Install the npm package.
 
-	npm i angular-modal@crystal
+	npm i @crystal/angular-modal
 
 Import module:
 
