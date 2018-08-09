@@ -1,5 +1,5 @@
 {
-  "name": "modal-app",
+  "name": "angular-modal@crystal",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -9,7 +9,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^6.0.0",
     "@angular/common": "^6.0.0",

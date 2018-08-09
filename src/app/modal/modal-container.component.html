@@ -1,0 +1,18 @@
+<div class="modal-overlay-backdrop" 
+	*ngIf="properties.overlayBackdrop" 
+	(click)="closeModal()" 
+	[ngClass]="properties.backdropClass"></div>
+
+<div class="modal-container" 
+	[ngStyle]="containerStyles" 
+	[ngClass]="properties.modalClass">
+	<div class="modal-header">
+		<div class="modal-title" *ngIf="properties.title">{{properties.title}}</div>
+		<div class="modal-close" *ngIf="properties.mode != 'dialog'" (click)="closeModal()"></div>
+	</div>
+	<div class="modal-wrapper" [ngStyle]="containerWrapperStyles">
+	    <div class="modal-scroll-content">
+			<ng-template ad-host></ng-template>
+		</div>
+	</div>
+</div>

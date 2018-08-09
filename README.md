@@ -1,27 +1,67 @@
-# ModalApp
+# Modal for Angular 2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+This module allows for show modal and dialog boxes.
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Install the npm package.
 
-## Code scaffolding
+	npm i angular-modal@crystal
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Import module:
 
-## Build
+	import {ModalModule} from 'angular-modal@crystal';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+	@NgModule({
+	    imports: [ModalModule]
+	})
 
-## Running unit tests
+## Usage
+To open the window, import the `Modal` service and call the `load()` method. As a parameter, pass your component. It will be the contents of the window..
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+	import {Modal} from 'angular-modal@crystal';
+	import {MyComponent} from './my.component';
 
-## Running end-to-end tests
+	public constructor(private modal: Modal) {};
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+	showModal() {
+	    this.modal.load({
+	        id: 'my-modal', 
+	        component: MyComponent
+	    });
+	}
 
-## Further help
+## Properties
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+|------------------------|---------------------------------------------|
+| `id: string = undefined` | The identifier of the window. It will distinguish one window from another. |
+| `mode: "desktop" | "mobile" | "dialog" = "desktop"` | The type of the window template. |
+| `data: any` | Any data that needs to be pass to the window. In the window component, you can get them using `@Input() modalData: any`. |
+| `width: string = "800px"` | Width of the window. |
+| `height: string = "auto"` | Height of the window. By default, the height of the window is determined by the height of its content. |
+| `maxWidth: string = "calc(100% - 32px)"` | Maximum width of the window. |
+| `maxHeight: string = "calc(100% - 32px)"` | Maximum height of the window. |
+| `overlayBackdrop: boolean = true` | Whether the window has a backdrop. |
+| `backdropClass: string | { [key: string]: any; }` | Custom classes for the backdrop. Supports the same syntax as ngClass. |
+| `modalClass: string | { [key: string]: any; }` | Custom classes for the modal window. Supports the same syntax as ngClass. |
+
+## Methods
+
+|------------------------|---------------------------------------------|
+| `load({ id: "my-modal", component: MyComponent })` | Shows the modal. |
+| `close({ id: "my-modal" })` | Hides the modal. |
+
+## Events
+
+Window state changes are available by subscription `stateEvents.subscribe()`.
+
+|------------------------|---------------------------------------------|
+| `show` | The event is called before the modal appears. |
+| `shown` | The event is called after the animation of the appearance of the modal. |
+| `hide` | The event is called before the modal is hidden. |
+| `hidden` | The event is called after the animation of the modal is hidden. |
+
+
+## Demo 
+
+http://crystalui.org/components/pinch-zoom
