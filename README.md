@@ -10,15 +10,18 @@ Install the npm package.
 
 Import module:
 
+```ts
 	import {ModalModule} from 'angular-modal@crystal';
 
 	@NgModule({
 	    imports: [ModalModule]
 	})
+```
 
 ## Usage
 To open the window, import the `Modal` service and call the `load()` method. As a parameter, pass your component. It will be the contents of the window..
 
+```ts
 	import {Modal} from 'angular-modal@crystal';
 	import {MyComponent} from './my.component';
 
@@ -30,6 +33,7 @@ To open the window, import the `Modal` service and call the `load()` method. As 
 	        component: MyComponent
 	    });
 	}
+```
 
 ## Properties
 
