@@ -1,5 +1,5 @@
 {
-  "name": "angular-modal@crystal",
+  "name": "@crystalui/angular-modal",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
