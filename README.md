@@ -19,7 +19,7 @@ import {ModalModule} from 'angular-modal@crystal';
 ```
 
 ## Usage
-To open the window, import the `Modal` service and call the `load()` method. As a parameter, pass your component. It will be the contents of the window..
+To open the window, import the `Modal` service and call the `load()` method. As a parameter, pass your component. It will be the contents of the window.
 
 ```ts
 import {Modal} from 'angular-modal@crystal';
